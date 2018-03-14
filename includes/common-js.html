@@ -1,0 +1,169 @@
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- BOOTSTRAP JS-->
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="<?php echo $rootpath; ?>assets/js/navigation.js"></script>
+<script src="<?php echo $rootpath; ?>assets/js/jquery.material.form.min.js"></script>
+<script src="<?php echo $rootpath; ?>assets/plugins/jquery.validate.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/additional-methods.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		$('.material').materialForm();
+	});
+</script>
+
+<script type="text/javascript">
+    // Login Form
+    $("#login-form-validate").validate({
+        rules: {
+            email: {
+                required: true
+            },
+            password: {
+                required: true,
+                minlength: 6,
+                maxlength: 15
+            }
+        },
+        //For custom messages
+        messages: {
+            password: {
+                required: "This feild is required",
+                minlength: "Enter more than 6 characters",
+                maxlength: "Enter less than 15 characters"
+            }
+        },
+        errorElement : 'div',
+        errorPlacement: function(error, element) {
+          	var placement = $(element).data('error');
+          	if (placement) {
+            	$(placement).append(error)
+          	} else {
+            	error.insertAfter(element);
+          	}
+        }
+    });
+
+    $(".r-mobile").on("focus", function() {
+    	$(".country-code").css('display', 'block');
+    });
+    $(".r-mobile").on("blur", function() {
+    	$(".country-code").css('display', 'none');
+    });
+
+
+    //EXISTING USER MOBILE
+    $.validator.addMethod("validateUserMobile", function(value, element)
+    {
+        var inputElem = $('#register-form-validate .r-mobile').val(),
+            data = { "r-mobile" : inputElem };
+
+        $.ajax({
+            type: "POST",
+            url: '/event/scripts/mobilecheck.php',
+            dataType: "json",
+            data: data,
+            success: function(data) {
+                if (data != 'true') {
+                  	return true;
+                }
+                else {
+                   	return false;
+                }
+            }
+        });
+    }, 'This mobile number is already registered');
+
+    //EXISTING USER EMAIL
+    $.validator.addMethod("validateUserEmail", function(value, element)
+    {
+        var inputElem = $('#register-form-validate .r-email').val(),
+            data = { "r-email" : inputElem };
+
+        $.ajax({
+            type: "POST",
+            url: '/event/scripts/emailcheck.php',
+            dataType: "json",
+            data: data,
+            success: function(data) {
+                if (data != 'true') {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        });
+    }, 'This email is already registered');
+
+    //MOBILE NUMBER VALIDATOR
+    $.validator.addMethod( "mobileIN", function( phone_number, element ) {
+        phone_number = phone_number.replace( /\(|\)|\s+|-/g, "" );
+        return phone_number.length > 9 &&
+            phone_number.match( /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6-9][0-9]{9}$/ );
+    }, "Please specify a valid mobile number" );
+
+
+
+    // Registration form
+    $("#register-form-validate").validate({
+        rules: {
+            name: {
+                required: true,
+                nodigit: true,
+                minlength: 3,
+                maxlength: 60
+            },
+            mobile: {
+                required: true,
+                mobileIN: true
+                // validateUserMobile: true
+            },
+            email: {
+                required: true,
+                // validateUserEmail: true
+            },
+            password: {
+                required: true,
+                minlength: 5
+            },
+            cpassword: {
+                required: true,
+                equalTo: "#r-password"
+            }
+            // tnc:{
+            //     required: true
+            // }
+        },
+        //For custom messages
+        messages: {
+            name:{
+                minlength: "At least 3 characters",
+                maxlength: "At most 60 characters"
+            },
+            password: {
+                required: "This feild is required",
+                minlength: "Password should be atlest 5 characters long"
+            },
+            cpassword: {
+                required: "Confirm your Password"
+            }
+            // tnc: {
+            //     required: "Please accept with our Terms and Conditions"
+            // }
+        },
+        errorElement : 'div',
+        errorPlacement: function(error, element) {
+          	var placement = $(element).data('error');
+          	if (placement) {
+            	$(placement).append(error)
+          	} else {
+            	error.insertAfter(element);
+          	}
+        }
+    });
+
+
+</script>
