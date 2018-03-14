@@ -1,0 +1,263 @@
+.overlay-modal__login-content-wrapper,
+.overlay-modal__register-content-wrapper,
+.overlay-modal__f-pass-content-wrapper {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 530px;
+    margin: auto;
+	transition: all .1s ease-out;
+	transform: scale(0);
+	z-index: 1000;
+    font-family: 'Open Sanns', sans-serif;
+}
+
+.overlay-modal__login-content-wrapper--open,
+.overlay-modal__register-content-wrapper--open,
+.overlay-modal__f-pass-content-wrapper--open {
+	transform: scale(1);
+}
+
+.overlay-modal__login-content,
+.overlay-modal__register-content,
+.overlay-modal__f-pass-content {
+    position: relative;
+    margin: auto;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 20px;
+    float: left;
+    box-shadow: 0px 2px 12px 1px rgba(0,0,0,.05);
+}
+
+.overlay-modal__login-content-l-pannel,
+.overlay-modal__register-content-l-pannel,
+.overlay-modal__f-pass-content-l-pannel  {
+    width: 200px;
+    overflow: hidden;
+    float: left;
+    background-image: url(//img1a.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_dec4bf.png);
+	background-position: center 85%;
+	background-repeat: no-repeat;
+	padding: 40px 35px;
+	height: 100%;
+	background-size: 180px;
+	background-color: #04C0CC;
+	color: #fff;
+}
+
+.overlay-modal__login-content-l-pannel__login-title,
+.overlay-modal__register-content-l-pannel__register-title,
+.overlay-modal__f-pass-content-l-pannel__f-pass-title {
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.overlay-modal__login-content-l-pannel__login-desc,
+.overlay-modal__register-content-l-pannel__register-desc,
+.overlay-modal__f-pass-content-l-pannel__f-pass-desc  {
+    font-size: 1.2em;
+	margin-top: 20px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 30px;
+}
+
+
+.overlay-modal__login-form-wrapper,
+.overlay-modal__register-form-wrapper,
+.overlay-modal__f-pass-form-wrapper {
+    float: left;
+    width: 375px;
+}
+
+.overlay-modal__login-content-close,
+.overlay-modal__register-content-close,
+.overlay-modal__f-pass-content-close {
+    float: right;
+    width: 25px;
+    cursor: pointer;
+}
+
+/*LOGIN FORM and REGISTER FORM*/
+.login-form,
+.f-pass-form {
+	padding: 56px 35px 16px 35px;
+}
+
+.register-form {
+	padding: 30px 35px 16px 35px;
+	height: 100%
+}
+
+.login-form .form-group,
+.f-pass-form .form-group {
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.register-form .form-group {
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.form-group.mobile-group {
+    position: relative;
+}
+
+.form-group.mobile-group .country-code {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+input.r-mobile {
+    padding-left: 35px;
+}
+
+.errorTxt {
+    font-size: .8em;
+    text-align: left;
+    margin-top: -6px;
+    color: red;
+}
+
+.btn-signin,
+.btn-register,
+.btn-f-pass {
+	background: #F0394D;
+	color: #fff;
+	width: 100%;
+    margin-top: 36px;
+}
+
+button {
+	font-size: 1.2em;
+	padding: 15px;
+	border-radius: 3px;
+	cursor: pointer;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3);
+	border: none;
+	outline: none;
+}
+
+
+.overlay-modal__plan-content-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transition: all .1s ease-out;
+    transform: scale(0);
+    z-index: 1000;
+    font-family: 'Open Sanns', sans-serif;
+}
+
+.overlay-modal__plan-content-wrapper--open {
+    transform: scale(1);
+}
+
+.overlay-modal__plan-content-wrapper button {
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .overlay-modal__login-content-wrapper,
+    .overlay-modal__register-content-wrapper,
+    .overlay-modal__f-pass-content-wrapper{
+        position: fixed;
+        z-index: 1000;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+
+    .overlay-modal__login-content,
+    .overlay-modal__register-content,
+    .overlay-modal__f-pass-content {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-color: transparent;
+        overflow-y: scroll;
+    }
+
+    .overlay-modal__login-content-l-pannel,
+    .overlay-modal__register-content-l-pannel,
+    .overlay-modal__f-pass-content-l-pannel {
+        width: 100%;
+        height: 100px;
+        color: #fff;
+        background-image: none;
+        padding: 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,.3);
+        position: fixed;
+    }
+
+    .overlay-modal__login-content-l-pannel__login-title,
+    .overlay-modal__register-content-l-pannel__register-title,
+    .overlay-modal__f-pass-content-l-pannel__f-pass-title {
+        display: block;
+        text-align: center;
+        line-height: 70px;
+    }
+
+    .overlay-modal__login-content-l-pannel__login-desc,
+    .overlay-modal__register-content-l-pannel__register-desc,
+    .overlay-modal__f-pass-content-l-pannel__f-pass-desc  {
+        display: none;
+    }
+
+    .overlay-modal__login-form-wrapper,
+    .overlay-modal__register-form-wrapper,
+    .overlay-modal__f-pass-form-wrapper {
+        width: 90%;
+        float: none;
+        margin: 80px auto 0;
+        position: relative;
+    }
+
+    .login-form,
+    .register-form,
+    .f-pass-form {
+        padding: 20px;
+        box-shadow: 0 2px 16px rgba(0,0,0,.2);
+        border-radius: 5px;
+        background-color: #fff;
+        height: initial;
+    }
+
+    .overlay-modal__login-content-close-wrapper,
+    .overlay-modal__register-content-close-wrapper,
+    .overlay-modal__f-pass-content-close-wrapper {
+        top: 0;
+        position: fixed;
+        color: #fff;
+        right: 0;
+    }
+
+    .overlay-modal__login-content-close,
+    .overlay-modal__register-content-close 
+    .overlay-modal__f-pass-content-close {
+        font-size: 1.5em;
+        height: 35px;
+        width: 35px;
+        text-align: center;
+        line-height: 35px;
+    }   
+
+    
+}

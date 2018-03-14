@@ -1,0 +1,135 @@
+.content {
+    position:relative; 
+    width:100%;   
+    margin:0 auto;
+    padding: 0 40px;
+}
+.content p {
+    margin-bottom: 10px;
+    font-size:14px;
+    line-height: 20px;
+    color: #454545;
+}
+
+h2.gallery-title {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 3em;
+    padding: 30px 0;
+    color: #F25667;
+    position: relative;
+    font-weight: 100;
+}
+
+h2.gallery-title hr {
+    width: 50px;
+    margin: 10px auto;
+    border: none;
+    height: 2px;
+    background: #F25667;
+}
+
+/* Basic elements */
+.gallery {
+	width: 100%;
+	min-width: 300px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Set the columns style */
+.gallery ul.entries-columns { 
+    display: block;
+	-webkit-column-gap: 1.5px;
+	-moz-column-gap: 10px;
+    column-gap: 1.5px;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+	column-count: 4;
+    list-style: none;
+} 
+.gallery ul.entries-columns li {   
+    display: inline-block;
+    width: 100%;
+	margin: 0px 0px -3px;
+	padding: 0 2px;   
+}
+/* Images */ 
+.gallery ul.entries-columns li a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+.gallery ul.entries-columns li a img {
+    position: static;
+    width: 100%;
+    z-index: 1;
+}
+
+/*LIGHTBOX*/
+.sl-navigation button,  button.sl-close {
+    box-shadow: none !important;
+}
+
+.sl-next, .sl-prev {
+    color: #fff;
+}
+
+
+body {
+    padding: 0 !important;
+}
+
+@media screen and (max-width: 1024px) {  
+    /* Set the columns style */
+    .gallery ul.entries-columns {  
+         -webkit-column-count: 3; 
+        -moz-column-count: 3; 
+        column-count: 3; 
+    }  
+}
+
+@media screen and (max-width: 800px) {  
+
+    .content {
+        padding: 0;
+    }
+
+    .content h2 {
+        font-size: 2.5em;
+        padding: 15px 0;
+    }
+
+    /* Set the columns style */
+    .gallery ul.entries-columns {  
+         -webkit-column-count: 2; 
+        -moz-column-count: 2; 
+        column-count: 2; 
+    } 
+}
+
+/*@media only screen and (max-width: 768px) {
+    .sl-navigation {
+        display: none !important;
+    }
+
+    .sl-image {
+        left: 0 !important;
+    }
+
+    .sl-image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}*/
+
+@media screen and (max-width: 425px) {
+
+    .content h2 {
+        font-size: 2em;
+        padding: 5px 0;
+    }
+}

@@ -1,0 +1,123 @@
+ul.tabs {
+    width: 800px;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+ul.tabs li.tab {
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px 10px;
+    width: 49%;
+    margin: auto;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #c0392b;
+    color: #fff;
+}
+
+ul.tabs li.tab:hover {
+    background-color: #e74c3c;
+}
+
+.ng-isolate-scope {
+    margin: auto;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #F0394D;
+    background-color: #F0394D;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs>li {
+    width: 14.28%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.nav-tabs>li>a {
+    border-radius: 0;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-bottom: none;
+    background-color: transparent;
+    display: block;
+    position: relative;
+    padding: 15px 10px;
+    font-size: .8em;
+}
+
+.nav-tabs>li>a:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 5px solid #fff;
+}
+
+.tab-content {
+    padding: 0 10px;
+}
+
+.uitab-form-wrap {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.form-title {
+    margin-bottom: 30px;
+    color: #009DA9;
+}
+
+.material .material-input {
+    margin-bottom: 25px;
+}
+
+.material .checkbox {
+    margin: 40px 0 20px;
+}
+
+.material {
+    display: table;
+    width: 100%;
+    margin: 0 0 50px;
+}
+
+.relative, .material-group {
+    position: relative;
+    display: table-row;
+}
+
+.material-group {
+    margin: 50px 0;
+    padding: 100px 0;
+}
+
+.relative .feild-name {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.relative input {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    .nav-tabs>li {
+        width: auto;
+    }
+}

@@ -1,0 +1,32 @@
+.collection {
+	width: 750px;
+	margin: 0.5rem auto 1rem;
+}
+
+.collection .row {
+	margin-bottom: 0 !important;	
+}
+
+li.collection-item:hover {
+	background-color: #eee;
+}
+
+i.fa.fa-pencil.fa-edit {
+	margin-left: 30px;
+	cursor: pointer;
+	font-size: 1.2em;
+}
+
+i.fa.fa-info-title {
+	width: 30px;
+}
+
+i.fa-edit-content {
+	color: #fff;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+

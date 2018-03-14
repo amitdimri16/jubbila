@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+  	height: 100%;
+}
+
+.whole-wrapper {
+	min-height: 100%;
+	margin-bottom: -490px; 
+}
+
+.whole-wrapper:after {
+	content: "";
+	display: block;
+}
+
+footer, .whole-wrapper:after {
+	height: 490px; 
+}
+
+footer {
+	width: 100%;
+	height: 490px;
+	background-color: #2B373A;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.clean {
+	clear: both;
+}
+
+footer a {
+	color: #B2B2B2;
+	text-decoration: none;
+	/*font-size: .8em;*/
+	line-height: 25px;
+}
+
+footer li {
+	list-style: none;
+	color: #fff;
+	font-size: .8em;
+}
+
+footer h5 {
+	color: #fff;
+	margin: 10px auto;
+}
+
+footer .top-section-footer li.d-table {
+	column-count: 2;
+	width: 100%;
+}
+
+footer .top-section-footer ul.d-table {
+	display: table;
+	width: 50%;
+	/*float: left;*/
+	margin: auto;
+	text-align: center;
+}
+
+footer .top-section-footer li.d-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+footer .top-section-footer li.social-media ul {
+	-webkit-column-count: 4;
+    -moz-column-count: 4;
+	column-count: 4;
+	text-align: center;
+}
+
+footer .top-section-footer li,
+footer .middle-section-footer li {
+	font-size: .9em;
+}
+
+footer .top-section-footer .f-icon {
+	width: 50px;
+}
+
+footer .top-section-footer .fa {
+	padding: 15px;
+}
+
+footer .middle-section-footer {
+	-webkit-column-count: 2;
+    -moz-column-count: 2;
+	column-count: 2;
+	text-align: center;
+	margin: 15px 0;
+}
+
+footer .bottom-section-footer {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+footer .col-sm-2 {
+	position: relative;
+	width: 16.6666%;
+	float: left;
+	padding: 0 15px;
+}
+
+footer .copyright {
+	background-color: #21282A;
+	padding: 10px 0;
+}
+
+footer .copyright ul li {
+	display: inline-block;
+	padding: 0 15px;
+	font-size: .9em;	
+}
+
+footer .copyright ul li a {
+	color: #fff;
+}
+
+footer .f-left {
+	float: left;
+}
+
+footer .f-right {
+	float: right;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.whole-wrapper {
+	  	margin-bottom: -305px; 
+	}
+
+	footer, .whole-wrapper:after {
+	  	height: 305px; 
+	}
+
+	footer {
+		height: 305px;
+	}
+
+	footer .hide-xs {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	.whole-wrapper {
+	  	margin-bottom: -365px; 
+	}
+
+	footer, .whole-wrapper:after {
+	  	height: 365px; 
+	}
+
+	footer {
+		height: 365px;
+	}
+
+	footer .top-section-footer li.d-table {
+		column-count: 1;
+	}
+
+}

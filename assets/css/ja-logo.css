@@ -1,0 +1,13 @@
+#info-wrapper {
+	height: calc(100% - 51px) !important;
+	position: relative;
+}
+
+.dropify-wrapper {
+	width: 60% !important;
+	margin: auto;
+}
+
+main {
+	height: 100% !important;
+}

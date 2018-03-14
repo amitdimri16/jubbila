@@ -1,0 +1,243 @@
+li.welcome-mssg {
+	padding: 12px !important;
+}
+
+#info-wrapper {
+	padding: 5px 10px !important;
+	margin: 1px !important;
+}
+
+.container {
+	width: 100% !important;
+	text-align: left !important;
+}
+
+.section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; 
+}
+
+.card {
+    overflow: hidden;
+}
+
+#profile-page-header .card-image {
+    height: 250px;
+}
+
+.change-profile-image {
+	background-color: #000;
+    opacity: .8;
+    width: 125px;
+    color: #fff;
+    text-align: center;
+    margin-top: 0;
+    transition: .15s;
+    position: relative;
+    height: 130px;
+}
+
+.change-profile-image p {
+	font-size: .9em;
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+}
+
+#profile-page-header .card-profile-image {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    top: 190px;
+    z-index: 1;
+    left: 40px;
+    cursor: pointer;
+    margin: 0;
+    cursor: pointer;
+    overflow: hidden;
+	border-radius: 50%;
+	box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#profile-page-header .card-content {
+    margin-top: -40px;
+}
+
+.row {
+	margin-bottom: 0 !important;
+}
+
+span.not-set {
+    background: red;
+    font-size: .85em;
+    color: #fff;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+.card i.fa-times {
+	float: right;
+}
+
+.card-reveal p i.fa-c-info {
+	width: 1.5rem;
+	color: #34495e;
+}
+
+.map-card #map {
+	width: 100%;
+	height: 250px;
+	position: relative;
+	overflow: hidden;
+}
+
+.map-card a.btn-floating {
+	top: -38px !important;
+}
+
+.map-card h4.card-title {
+	margin-top: 0 !important;
+}
+
+li.collection-item:hover {
+	background-color: #eee;
+}
+
+i.fa.fa-pencil.fa-edit {
+	margin-left: 30px;
+	cursor: pointer;
+	font-size: 1.2em;
+}
+
+i.fa.fa-info-title {
+	width: 30px;
+}
+
+i.fa-edit-content {
+	color: #fff;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.card.add-hours .input-field {
+    margin-top: 0 !important;
+}
+
+.modal-wrapper {
+    z-index: 2000;
+    -webkit-transition: opacity .05s cubic-bezier(0.4,0.0,0.2,1);
+    transition: opacity .05s cubic-bezier(0.4,0.0,0.2,1);
+    opacity: 1;
+    position: fixed;
+    display: none;
+}
+
+.modal-wrapper .modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.502);
+    overflow-y: scroll;
+}
+
+.modal-wrapper .modal-content {
+    display: table;
+    padding: 20px;
+    margin: auto;
+    top: 70px;
+}
+
+.modal-wrapper .modal-content p {
+    margin: 0;
+}
+
+.modal-wrapper .modal-content .modal-footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.modal-footer a.btn {
+    background-color: transparent !important;
+    box-shadow: none;
+    font-weight: 500;
+}
+
+.modal-footer a.btn-submit {
+    color: #267AB6;
+}
+
+.modal-footer a.btn-cancel {
+    color: #3E3E3E;
+}
+
+.modal-footer a.btn-submit:hover {
+    background-color: #C8E2F4 !important;
+    box-shadow: none;
+}
+
+.modal-footer a.btn-cancel:hover {
+    background-color: #D3D3D3 !important;
+    box-shadow: none;
+}
+
+.input-field label {
+    left: 0 !important;
+}
+
+.modal-content p.modal-detail {
+    font-size: .85em;
+    color: #777;
+}
+
+#e-add-hours .card-content .row {
+    display: inline-flex;
+    width: 100%;
+}
+
+#e-add-hours span.day-name {
+    width: 80px;
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    padding-top: 10px;
+}
+
+#e-add-hours span.switch {
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    width: 150px;
+    padding-top: 10px;
+}
+
+#e-add-hours .input-field {
+    margin: 0 10px !important;
+    width: 100px;
+    display: inline-block;
+}
+
+#e-add-hours .input-field input {
+    margin: 0 !important;
+}
+
+
+
+
+@media only screen and (max-width: 1177px) {
+	#profile-page-header .card-profile-image {
+		width: 90px;
+		height: 90px;
+		transition: .3s;
+	}
+}
+
+
+

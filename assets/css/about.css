@@ -1,0 +1,113 @@
+main {
+	padding: 0 60px;
+}
+
+h2.about-us-title {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 3em;
+    padding: 30px 0;
+    color: #F25667;
+    position: relative;
+    font-weight: 100;
+}
+
+h2.about-us-title hr {
+    width: 50px;
+    margin: 10px auto;
+    border: none;
+    height: 2px;
+    background: #F25667;
+}
+
+.about-wrapper { 
+    list-style: none;
+    clear: both;
+    display: table;
+
+} 
+.about-wrapper__member {
+	display: inline-block;
+	width: 33.33%;
+	float: left;
+	margin-bottom: 50px;
+}
+
+.member-image {
+    width: 100%;
+	background-color: #F0EFEC;
+}
+
+.member-info-wrapper {
+    padding: 25px 10px;
+}
+
+.member-info__name {
+    text-align: center;
+    color: #009DA9;
+    font-weight: 600;
+}
+
+.member-info__designation {
+    text-align: center;
+    color: #F25667;
+    padding: 10px;
+}
+
+.member-info__desc {
+    text-align: center;
+    font-size: .9em;
+    color: #444;
+    line-height: 25px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+	
+	main {
+		padding: 60px 10px 0;
+	}
+
+	.about-wrapper__member {
+		display: inline-block;
+		width: 50%;
+		float: left;
+	}
+
+}
+
+@media only screen and (max-width: 628px) {
+
+	.about-wrapper__member {
+		display: inline-block;
+		width: 100%;
+		float: left;
+		padding: 10px;
+	}
+
+}
+
+@media screen and (max-width: 800px) {  
+
+    h2.about-us-title {
+        font-size: 2.5em;
+        padding: 15px 0;
+    }
+
+    /* Set the columns style */
+    .gallery ul.entries-columns {  
+         -webkit-column-count: 2; 
+        -moz-column-count: 2; 
+        column-count: 2; 
+    } 
+}
+@media screen and (max-width: 425px) {
+
+    h2.about-us-title {
+        font-size: 2em;
+        padding: 5px 0;
+    }
+}
+
+
